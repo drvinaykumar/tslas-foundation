@@ -82,7 +82,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  /* font-size: 100%; */
   font: inherit;
   vertical-align: baseline;
 }
@@ -160,7 +160,7 @@ textarea {
 
 body {
   line-height: 1;
-  min-height: var(--viewport-height);
+  /* min-height: var(--viewport-height); */
   min-width: 320px;
   overflow-x: hidden;
   word-wrap: break-word;
@@ -226,7 +226,7 @@ body.is-loading:after {
 }
 
 html {
-  font-size: 16pt;
+  font-size: 12pt;
 }
 
 u {
@@ -314,20 +314,8 @@ unloaded-script {
 }
 
 #main {
-  --alignment: center;
-  --flex-alignment: center;
-  --indent-left: 1;
-  --indent-right: 1;
-  --margin-left: auto;
-  --margin-right: auto;
-  --border-radius-tl: 0;
-  --border-radius-tr: 0;
-  --border-radius-br: 0;
-  --border-radius-bl: 0;
-  align-items: center;
   display: flex;
-  flex-grow: 0;
-  flex-shrink: 0;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
@@ -461,7 +449,6 @@ p spoiler-text {
   font-size: 3em;
   line-height: 1.125;
   font-weight: 400;
-  
 }
 
 #text01 a {
@@ -530,9 +517,9 @@ p spoiler-text {
 }
 
 #buttons01 {
-  gap: 1.25rem;
+  /* gap: 1.25rem;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 }
 
 #buttons01 li a {
@@ -970,23 +957,55 @@ p spoiler-text {
   margin-top: 1.5rem !important;
 }
 
-@media (max-width: 1920px) {
+.vline {
+  background-color: white;
+  width: 2px;
+  height: 90vh;
+  opacity: 0.2;
 }
 
-@media (max-width: 1680px) {
-  html {
-    font-size: 12pt;
-  }
+
+
+.custom {
+  width: 900px;
+  display: flex;
+  align-items: start;
 }
 
-@media (max-width: 1280px) {
-  html {
-    font-size: 12pt;
-  }
+.custom2 {
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 1024px) {
+.buttonlist {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  gap: 15px;
 }
+
+.top {
+  align-self: flex-start;
+  margin-top: 92px;
+}
+
+.cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tslas {
+  height: 100px;
+  margin-top: 50px;
+}
+
+.longbtn {
+  height: 100px;
+}
+
 
 @media (max-width: 980px) {
   html {
@@ -1157,6 +1176,26 @@ p spoiler-text {
     min-height: 100% !important;
     width: 100% !important;
   }
+
+  .vline{
+    width: 90%;
+    height: 2px;
+    margin: 50px 0;
+  }
+
+  .top{
+    margin: 0px;
+    align-self: center;
+  }
+
+  .cont {
+    flex-direction: column;
+  }
+
+  #text01{
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 736px) {
@@ -1164,11 +1203,13 @@ p spoiler-text {
     font-size: 12pt;
   }
 
-  body, .wrapper, #main{
+  body,
+  .wrapper,
+  #main {
     height: 1700px;
   }
 
-  .custom2{
+  .custom2 {
     text-align: center;
     width: 100%;
   }
@@ -1238,10 +1279,6 @@ p spoiler-text {
     .bg {
     min-height: auto;
   }
-
-  .cont{
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1288,45 +1325,4 @@ p spoiler-text {
     --padding-vertical: 0rem;
     --spacing: 0.84375rem;
   }
-}
-
-.custom{
-    width: 900px;
-    display: flex;
-    align-items: start;
-}
-
-.custom2{
-  display: flex;
-  flex-direction: column;
-}
-
-.buttonlist{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 300px;
-}
-
-.top{
-  align-self: flex-start;
-  margin-top: 92px;
-}
-
-.cont {
-  display: flex;
-  align-items: center;
-
-  gap: 100px;
-  padding: 0px 10vh;
-
-}
-
-.tslas{
-  height: 100px;
-  margin-top: 50px;
-}
-
-.longbtn{
-  height: 100px;
 }
